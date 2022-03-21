@@ -46,4 +46,44 @@ const teamMembers = [
 ]
 
 
+const teamContainer = document.querySelector('.team-container');
+
+
+function generateMembersCards() {
+    
+    for (let i = 0; i < teamMembers.length; i++) {
+        const member = teamMembers[i];
+        const teamCardContainer = document.createElement('div');
+        teamCardContainer.classList.add('team-card');
+        teamContainer.appendChild(teamCardContainer);
+
+        const cardImageDiv = document.createElement('div');
+        cardImageDiv.classList.add('card-image');
+        teamCardContainer.appendChild(cardImageDiv);
+
+        const cardImage = document.createElement('img');
+        cardImageDiv.appendChild(cardImage);
+        cardImage.src = member.photo;
+
+        const cardTextDiv = document.createElement('div');
+        teamCardContainer.appendChild(cardTextDiv);
+        cardTextDiv.classList.add('card-text');
+
+        const nameText = document.createElement('h3');
+        nameText.innerText = member.name;
+        cardTextDiv.appendChild(nameText);
+
+        const roleText = document.createElement('p');
+        roleText.innerText = member.role;
+        cardTextDiv.appendChild(roleText);
+
+    }
+}
+
+generateMembersCards();
+
+
+
+
+
 
