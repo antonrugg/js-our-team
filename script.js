@@ -80,6 +80,8 @@ function generateSingleCard(member) {
     const roleText = document.createElement('p');
     roleText.innerText = member.role;
     cardTextDiv.appendChild(roleText);
+
+    
 }
 
 //select button to add a new member
